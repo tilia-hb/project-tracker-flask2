@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Project Info</title>
+</head>
+<body>
+	<h1>Project title: {{ proj_info[0] }}</h1>
+	<p> <b>Description:</b> {{ proj_info[1] }} </p>	
+	<p> <b>Grade:</b> {{ proj_info[2] }} </p>
+
+
+	<div>
+		<table>
+			<thead>
+				<tr><td>Name</td>
+					<td>Grade</td>
+				</tr>
+
+			</thead>
+			{% for row in grades %}
+			<tr><td>{{row[0]}}</td>
+				<td> {{row[1]}}</td>
+
+		</tr>
+			{%endfor %}
+
+	</table>
+</body>
+</html>
